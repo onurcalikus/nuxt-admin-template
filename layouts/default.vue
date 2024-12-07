@@ -1,7 +1,8 @@
 <!-- layouts/default.vue -->
 <script setup lang="ts">
 import { ref } from 'vue'
-
+// Dark mode state
+const darkMode = ref(false)
 const sidebarOpen = ref(true) // Mobile off-canvas toggle
 const collapsed = ref(false)  // Collapsed state for sidebar
 
@@ -11,11 +12,15 @@ function toggleSidebar() {
 function toggleMobileSidebar() {
   sidebarOpen.value = !sidebarOpen.value
 }
+
+function toggleDarkMode() {
+  darkMode.value = !darkMode.value
+}
 </script>
 
 <template>
-  <div class="h-screen flex flex-col">
-    <Header :onToggleSidebar="toggleMobileSidebar" />
+  <div class="h-screen flex flex-col" :class="{'dark': darkMode}">
+    <Header :onToggleSidebar="toggleMobileSidebar" :isDarkMode="darkMode" :onToggleDarkMode="toggleDarkMode"/>
 
     <div class="flex flex-1 overflow-hidden">
       <SideBar
