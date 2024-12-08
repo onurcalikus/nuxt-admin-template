@@ -1,6 +1,6 @@
-# Nuxt Minimal Starter
+# Nuxt Admin Template
 
-Look at the [Nuxt documentation](https://nuxt.com/docs/getting-started/introduction) to learn more.
+This repo is a admin dashboard starter project wtih Nuxt3.
 
 ## Setup
 
@@ -72,4 +72,3 @@ yarn preview
 bun run preview
 ```
 
-Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
