@@ -17,7 +17,7 @@
       />
       <div class="flex items-center truncate">
         <span class="truncate ml-2 text-sm font-medium text-gray-600 dark:text-gray-100 group-hover:text-gray-800 dark:group-hover:text-white">
-          Acme Inc.
+          Tim Cook
         </span>
         <svg
           class="w-3 h-3 shrink-0 ml-1 fill-current text-gray-400 dark:text-gray-500"
@@ -44,14 +44,14 @@
       >
         <!-- Profile Info -->
         <div class="pt-0.5 pb-2 px-3 mb-1 border-b border-gray-200 dark:border-gray-700/60">
-          <div class="font-medium text-gray-800 dark:text-gray-100">Acme Inc.</div>
+          <div class="font-medium text-gray-800 dark:text-gray-100">Tim Cook</div>
           <div class="text-xs text-gray-500 dark:text-gray-400 italic">Administrator</div>
         </div>
         <!-- Dropdown Links -->
         <ul ref="dropdown" @focusin="dropdownOpen = true" @focusout="closeDropdown">
           <li>
             <NuxtLink
-              class="font-medium text-sm text-violet-500 hover:text-violet-600 dark:hover:text-violet-400 flex items-center py-1 px-3"
+              class="font-medium text-sm text-gray-500 hover:text-violet-600 dark:hover:text-violet-400 flex items-center py-1 px-3"
               to="/settings/account"
               @click="closeDropdown"
             >
@@ -60,7 +60,7 @@
           </li>
           <li>
             <NuxtLink
-              class="font-medium text-sm text-violet-500 hover:text-violet-600 dark:hover:text-violet-400 flex items-center py-1 px-3"
+              class="font-medium text-sm text-gray-500 hover:text-violet-600 dark:hover:text-violet-400 flex items-center py-1 px-3"
               to="/signin"
               @click="closeDropdown"
             >
@@ -90,9 +90,9 @@ const dropdownOpen = ref(false)
 const trigger = ref(null)
 const dropdown = ref(null)
 
-/*// User Avatar (can be replaced with dynamic data)
-import UserAvatar from '../../public/images/user-avatar-32.png' // Adjust the path as needed
-const userAvatar = UserAvatar*/
+// User Avatar (can be replaced with dynamic data)
+import UserAvatar from '../../public/images/avatars/image-timcook.png' // Adjust the path as needed
+const userAvatar = UserAvatar
 
 // Methods
 const toggleDropdown = () => {

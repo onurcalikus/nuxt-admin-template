@@ -21,7 +21,7 @@
     <nav class="flex-1 overflow-auto">
       <ul class="space-y-2">
         <li v-for="(section, index) in sections" :key="section.title">
-          <button @click="toggleSection(index)" class="w-full flex items-center justify-between px-4 py-2 rounded-md hover:bg-gray-100 focus:outline-none focus:bg-gray-100 text-gray-700 font-medium">
+          <button @click="toggleSection(index)" class="w-full flex items-center justify-between px-4 py-2 rounded-md hover:bg-gray-100 focus:outline-none focus:bg-gray-100 text-sm text-gray-600 hover:text-indigo-600 font-medium">
             <div class="flex items-center space-x-2">
               <span>{{ section.icon }}</span>
               <span>{{ section.title }}</span>
@@ -36,7 +36,7 @@
           </button>
           <ul v-if="section.links && section.links.length > 0 && !section.collapsed" class="ml-8 mt-2 space-y-1">
             <li v-for="link in section.links" :key="link.name">
-              <NuxtLink :to="link.href" class="block px-4 py-2 text-sm text-gray-600 rounded-md hover:bg-gray-50">
+              <NuxtLink :to="link.href" class="block px-4 py-2 text-sm text-gray-500 hover:text-indigo-500 rounded-md hover:bg-gray-50">
                 {{ link.name }}
               </NuxtLink>
             </li>
@@ -49,15 +49,15 @@
     <div class="mt-4 border-t pt-4">
       <h3 class="text-xs uppercase text-gray-400 mb-2">Your Teams</h3>
       <div class="space-y-2">
-        <a href="#" class="flex items-center space-x-2 px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-gray-700">
+        <a href="#" class="flex items-center space-x-2 px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-gray-700 hover:text-indigo-600">
           <span class="inline-block w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">H</span>
           <span>Heroicons</span>
         </a>
-        <a href="#" class="flex items-center space-x-2 px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-gray-700">
+        <a href="#" class="flex items-center space-x-2 px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-gray-700 hover:text-indigo-600">
           <span class="inline-block w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">T</span>
           <span>Tailwind Labs</span>
         </a>
-        <a href="#" class="flex items-center space-x-2 px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-gray-700">
+        <a href="#" class="flex items-center space-x-2 px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-gray-700 hover:text-indigo-600">
           <span class="inline-block w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">W</span>
           <span>Workcation</span>
         </a>
@@ -65,7 +65,7 @@
       <div class="mt-4">
         <NuxtLink
             to="/settings"
-            class="flex items-center space-x-2 px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-gray-700"
+            class="flex items-center space-x-2 px-4 py-2 text-sm rounded-md hover:bg-gray-100 text-gray-700 hover:text-indigo-600"
         >
               <span class="inline-block w-6 h-6 bg-gray-200 rounded-full flex items-center justify-center">
                 <svg class="h-4 w-4 text-gray-600" fill="none" stroke="currentColor" stroke-width="2"
@@ -89,13 +89,13 @@ const sidebarOpen = ref(false)
 const sections = ref([
   {
     title: 'Dashboard',
-    icon: '🏠',
+    // icon: '🏠',
     links: [],
     collapsed: true // no links, so collapse doesn't really matter here
   },
   {
     title: 'Team',
-    icon: '👥',
+    // icon: '👥',
     collapsed: true,
     links: [
       { name: 'Members', href: '/team/members' },
@@ -104,7 +104,7 @@ const sections = ref([
   },
   {
     title: 'Projects',
-    icon: '📂',
+    // icon: '📂',
     collapsed: true,
     links: [
       { name: 'All Projects', href: '/projects' },
@@ -113,19 +113,19 @@ const sections = ref([
   },
   {
     title: 'Calendar',
-    icon: '📅',
+    // icon: '📅',
     links: [],
     collapsed: true
   },
   {
     title: 'Documents',
-    icon: '📄',
+    // icon: '📄',
     links: [],
     collapsed: true
   },
   {
     title: 'Reports',
-    icon: '📊',
+    // icon: '📊',
     links: [],
     collapsed: true
   }

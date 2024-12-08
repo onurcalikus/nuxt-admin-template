@@ -9,7 +9,7 @@
                 d="M4 6h16M4 12h16M4 18h16"/>
         </svg>
       </button>
-      <span class="font-semibold text-xl text-gray-700">MyApp</span>
+      <span class="font-medium text-xl text-indigo-600">APP Inc.</span>
     </div>
     <div class="flex items-center space-x-4">
       <div>
